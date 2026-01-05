@@ -622,3 +622,40 @@ small {
     padding: 16px 0;
   }
 }
+
+/* --- GitHub Link --- */
+
+.github-link {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  color: var(--text-muted);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0.8;
+}
+
+.github-link:hover {
+  color: var(--text-main);
+  transform: scale(1.1) rotate(5deg);
+  opacity: 1;
+}
+
+.github-link svg {
+  fill: currentColor;
+}
+
+@media (max-width: 768px) {
+  .github-link {
+    top: 16px;
+    right: 16px;
+  }
+  
+  .github-link svg {
+    width: 28px;
+    height: 28px;
+  }
+}
